@@ -82,7 +82,7 @@ else:
     arestaDestino = input("Destino: ")
 
     if valorado:
-      peso = input("Peso/Valor (numerico): ")
+      peso = int(input("Peso/Valor (numerico): "))
     else:
       peso = 1
 
@@ -90,9 +90,9 @@ else:
     if not orientado:
       grafo.addAresta(arestaDestino, arestaOrigem, peso)
 
-  origem = input("Vertice de origem")
+  origem = input("Vertice de origem: ")
 
-resultado = dijsktra(grafo, origem)
+resultado = dijsktra(grafo, str(origem))
 
 visitados = resultado[0]
 caminho = resultado[1]
